@@ -11,7 +11,7 @@ class Solution:
 
       def helper(node):
           if not node:
-              return
+            return
 
           helper(node.left)
           output.append(node.val)
