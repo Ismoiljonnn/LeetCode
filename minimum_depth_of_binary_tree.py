@@ -24,4 +24,4 @@ class Solution(object):
         queue.append((node.left, depth + 1))
 
       if node.right:
-        queue.append((node.right, depth + 1))
+        queue.append((node.right, depth + 1)) 
