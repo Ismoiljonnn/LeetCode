@@ -1,15 +1,16 @@
+# leetcode 20: valid parentheses
 class Solution:
   def isValid(self, s):
-    pairs = {')': '(', '}': '{', ']': '['}
     stack = []
+    mapping = {")": "(", "}": "{", "]": "["}
 
     for char in s:
-      if char in pairs:
-        if stack and stack[-1] == pairs[char]:
-          stack.pop()
-        else:
+      if char in mapping:
+        top_element = stack.pop() if stack else "#"
+
+        if mapping[char] != top_element:
           return False
       else:
         stack.append(char)
 
-    return len(stack) == 0
+    return not stack
