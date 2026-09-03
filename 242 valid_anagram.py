@@ -15,3 +15,11 @@ class Solution:
       seen[char] -= 1
 
     return True
+
+
+# pythonic way
+from collections import Counter
+
+class Solution:
+  def isAnagram(self, s: str, t: str) -> bool:
+    return Counter(s) == Counter(t)
