@@ -12,6 +12,6 @@ class Solution:
     for char in t:
       if char not in seen or seen[char] == 0:
         return False
-      seen[char] - 1
+      seen[char] -= 1
 
     return True
